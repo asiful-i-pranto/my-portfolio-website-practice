@@ -14,21 +14,20 @@
 
     <!-- header -->
      <header class="active">
-        <a href="#" class="logo"><img src="" alt=""><span>Asiful Pranto</span></a>
+        <a href="#" class="logo"><img src="images/logo.jpg" alt=""><span>Asiful Pranto</span></a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Service</a>
-            <a href="#">Resume</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#resume">Resume</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
      </header>
 
     <!-- bars background -->
-
     <div class="bars-box active">
         <div class="bar" style="--i:6;"></div>
         <div class="bar" style="--i:5;"></div>
@@ -39,14 +38,15 @@
     </div>
 
     <!-- home section -->
-
-    <section class="home active">
+    <section id="home" class="home active">
         <div class="home-detail">
-            <h1>Asiful Pranto</h1>
+            <h2>Hi! I'm</h2>
+            <h1>MD. ASIFUL ISLAM</h1>
             <h2>I'm a
                 <span style="--i:4;" data-text="Mechanical Engineer">Mechanical Engineer</span>
                 <span style="--i:3;" data-text="Web Developer">Web Developer</span>
                 <span style="--i:2;" data-text="Programmer">Programmer</span>
+                <!-- <span style="--i:2;" data-text="ML Researcher">ML Researcher</span> -->
                 <span style="--i:1;" data-text="CAD Designer">CAD Designer</span>
             </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates magnam modi distinctio dolorem ex fugit inventore nam, quos magni expedita et illo minus. Totam officia deserunt veritatis dolores sint dolore reprehenderit dolorum at eos voluptas, dolorem in dignissimos cupiditate iusto asperiores. Ullam, provident tempore asperiores vitae impedit autem laudantium dolores doloremque sequi officia temporibus saepe iure at tenetur molestiae dolore excepturi perferendis minus ipsum ab ad ut dolor. Assumenda.</p>
@@ -54,8 +54,8 @@
             <div class="btn-sci">
                 <a href="#" class="btn">Download CV</a>
                 <div class="sci">
-                    <a href=""><i class='bx bxl-github'></i></a>
-                    <a href=""><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/asiful-i-pranto" target=”_blank”><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/asiful-i-pranto/" target=”_blank”><i class='bx bxl-linkedin' ></i></a>
                     <a href=""><i class='bx bxl-discord-alt'></i></a>
                     <a href=""><i class='bx bxl-facebook' ></i></a>
                 </div>
@@ -72,8 +72,7 @@
     </section>
 
     <!-- services section -->
-
-    <section class="services">
+    <section id="services" class="services">
         <h2 class="heading">My <span>Services</span></h2>
         <div class="services-container">
             <div class="services-box">
@@ -81,7 +80,7 @@
                     <i class='bx bx-code-alt'></i>
                     <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
-                <h3>Web Development</h3>
+                <h3>Front-End Development</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
             </div>
 
@@ -90,7 +89,7 @@
                     <i class='bx bxs-paint'></i>
                     <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
-                <h3>UI/UX Design</h3>
+                <h3>WordPress Development</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
             </div>
 
@@ -100,34 +99,7 @@
                     <i class='bx bx-palette'></i>
                     <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
-                <h3>Graphics Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
-            </div>
-
-            <div class="services-box">
-                <div class="icon">
-                    <i class='bx bx-trending-up'></i>
-                    <a href="#"><i class='bx bx-arrow-back'></i></a>
-                </div>
-                <h3>SEO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
-            </div>
-
-            <div class="services-box">
-                <div class="icon">
-                    <i class='bx bx-slideshow'></i>
-                    <a href="#"><i class='bx bx-arrow-back'></i></a>
-                </div>
-                <h3>Video Editing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
-            </div>
-
-            <div class="services-box">
-                <div class="icon">
-                    <i class='bx bx-camera'></i>
-                    <a href="#"><i class='bx bx-arrow-back'></i></a>
-                </div>
-                <h3>Photography</h3>
+                <h3>CAD Design</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
             </div>
 
@@ -135,7 +107,7 @@
     </section>
 
     <!-- resume section -->
-     <section class="resume">
+     <section id="resume" class="resume">
         <div class="resume-container">
             <div class="resume-box">
                 <h2>Why Hire Me?</h2>
@@ -323,7 +295,7 @@
      </section>
 
     <!-- portfolio section -->
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <h2 class="heading">Latest <span>Project</span></h2>
         <div class="portfolio-container">
             <div class="portfolio-box">
@@ -342,7 +314,7 @@
                 <div class="portfolio-detail">
                     <p class="numb">02</p>
                     <h3>React Project</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta similique consequuntur exercitationem quia cumque!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt dicta </p>
                     <div class="tech">
                         <p>XML, BootStrap, React</p></div>
                     <div class="live-github">
@@ -394,9 +366,9 @@
         </div>
         
     </section>
-    <!-- contact section -->
 
-    <section class="contact">
+    <!-- contact section -->
+    <section id="contact" class="contact">
          <div class="contact-container">
             <div class="contact-box">
                 <h2>Let's Work Together</h2>

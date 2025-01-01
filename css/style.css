@@ -12,20 +12,30 @@
 
 
 :root {
-    --bg-color: #1f242d;
+    /* --bg-color: #1f242d;
     --second-bg-color: #323946;
     --main-color: #7cf03d;
-    /* --main-color: #FF3333; */
+    
+    --white-color: #fff;
+    --disabled-color: #fff3; */
+
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --main-color: #00ff99;
+    --pure-black-color: #000000;
+    
     --white-color: #fff;
     --disabled-color: #fff3;
 }
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     color: var(--white-color);
+    background: var(--bg-color);
 }
 
 header {
@@ -34,20 +44,19 @@ header {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--pure-black-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-
     visibility: hidden;
     opacity: 0;
 }
 
 
 header.active {
-    animation: show-header 1.5s linear forwards;
-    animation-delay: 1.2s;
+    animation: show-header 0.5s linear forwards;
+    animation-delay: 0s;
 }
 
 @keyframes show-header {
@@ -61,6 +70,19 @@ header.active {
     font-size: 3rem;
     color: var(--white-color);
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.logo img {
+    height: 5rem;
+    width: 5rem;
+    padding: 5px;
+    background-color: white;
+    border-radius: .5rem; 
+
+    
 }
 
 nav a {
@@ -81,7 +103,7 @@ nav a.active{
     display: none;
 }
 
-.bars-box {
+/* .bars-box {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -120,24 +142,26 @@ nav a.active{
     100% {
         transform: translateY(0);
     }
-}
+} */
 
 
 section {
-    position: absolute;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     padding: 10rem 9% 2rem;
-    /* background: var(--bg-color); */
-    visibility: hidden;
+    background: var(--bg-color);
+    /* visibility: hidden;
     opacity: 0;
-    overflow: hidden;
-    /* visibility: visible;
+    overflow: hidden; */
+    visibility: visible;
     opacity: 1;
-    overflow: auto; */
+    overflow: auto;
+    
 }
 
-section.active {
+/* section.active {
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.6s;
 }
@@ -148,7 +172,7 @@ section.active {
         opacity: 1;
         overflow: auto;
     }
-}
+} */
 
 .home {
     display: flex;
@@ -160,12 +184,13 @@ section.active {
 
 .home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
+    margin-top: -1rem;
 }
 
 .home-detail h2 {
     display: inline-block;
     font-size: 3.2rem;
-    margin-top: -1rem;
+    
 }
 
 .home-detail h2 span {
@@ -260,8 +285,8 @@ section.active {
 
 .home-img .img-box {
     position: relative;
-    width: 28vw;
-    height: 28vw;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     padding: .5rem;
     display: flex;
@@ -323,6 +348,10 @@ section.active {
 
 .heading span {
     color: var(--main-color);
+}
+
+.services {
+    align-content: center;
 }
 
 .services-container {
@@ -396,6 +425,10 @@ section.active {
 
 .services-box p {
     font-size: 1.6rem;
+}
+
+.resume {
+    margin-top: 2rem;
 }
 
 
@@ -585,7 +618,9 @@ section.active {
     font-size: 1.8rem;
 }
 
-
+.portfolio {
+    align-content: center;
+}
 
 
 .portfolio-container {
@@ -726,6 +761,10 @@ section.active {
 
 .portfolio-box .navigation .arrow-right {
     margin-left: 1.5rem;
+}
+
+.contact {
+    align-content: center;
 }
 
 

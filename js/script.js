@@ -1,8 +1,9 @@
-let navLinks = document.querySelectorAll('header nav a');
+let navLinks = document.querySelectorAll('header nav ul a');
 const logoLink = document.querySelector('.logo');
 let sections = document.querySelectorAll('section');
 const menuIcon = document.querySelector('#menu-icon');
 const navBar = document.querySelector('header nav');
+
 
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
@@ -129,6 +130,7 @@ window.onscroll = () => {
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default jump behavior
+
 
         const targetId = link.getAttribute('href').substring(1); // Get section ID
         const targetSection = document.getElementById(targetId);

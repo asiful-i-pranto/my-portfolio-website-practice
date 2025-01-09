@@ -294,7 +294,7 @@ section {
     align-items: center; 
 }
 
-.btn {
+.button {
     display: inline-block;
     padding: 1rem 3rem;
     background: var(--main-color);
@@ -347,6 +347,7 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
 }
 
 
@@ -377,13 +378,17 @@ section {
     height: 100%;
     background: var(--bg-color);
     border-radius: 50%;
+    clip-path: circle(50%);
     border: .01rem solid var(--bg-color);
     display: flex;
     justify-content: center;
     z-index: 1;
     overflow: hidden;
-
+    cursor: pointer;
+    
 }
+
+
 
 .home-img .img-box .img-item img {
     position: absolute;
@@ -391,7 +396,51 @@ section {
     width: 100%;
     object-fit: cover;
     mix-blend-mode: lighten;
+    transition: .2s linear;
+    
 }
+
+.home-img .img-box .img-item img:hover {
+    transform: scale(1.1);
+}
+
+.home .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    display: none;
+
+}
+
+.home .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 20;
+    
+
+}
+
+.home .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 40rem;
+    object-fit: cover;
+}
+
+
 
 
 .heading {
@@ -974,6 +1023,10 @@ section {
         width: 35rem;
         height: 35rem;
     }
+
+    /* .home .popup-image img {
+        width: 95%;
+    } */
 
     .resume-container,
     .portfolio-container,

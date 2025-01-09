@@ -3,6 +3,9 @@ const logoLink = document.querySelector('.logo');
 let sections = document.querySelectorAll('section');
 const menuIcon = document.querySelector('#menu-icon');
 const navBar = document.querySelector('header nav');
+let popImgOverlay = document.querySelector('.popup-image');
+
+let proImage = document.querySelector('.home-img .img-box .img-item img');
 
 
 menuIcon.addEventListener('click', () => {
@@ -10,6 +13,14 @@ menuIcon.addEventListener('click', () => {
     navBar.classList.toggle('active');
 })
 
+
+proImage.addEventListener('click', () => {
+    popImgOverlay.style.display = 'block';
+})
+
+popImgOverlay.addEventListener('click', () => {
+    popImgOverlay.style.display = 'none';
+})
 // const activePage = () => {
 //     const header = document.querySelector("header")
 //     const barsBox = document.querySelector(".bars-box")

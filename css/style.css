@@ -52,6 +52,12 @@ html{
     section {
         scroll-snap-align: start;
     }
+
+    .resume-container {
+        margin-top: 10rem;
+    }
+
+
 }
 
 body {
@@ -388,10 +394,11 @@ section {
 }
 
 .services {
-    align-content: center;
+    align-content: start;
 }
 
 .services-container {
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
@@ -465,7 +472,7 @@ section {
 }
 
 .resume {
-    margin-top: 2rem;
+    margin-top: 0px;
 }
 
 

@@ -67,23 +67,23 @@ menuIcon.addEventListener('click', () => {
 
 // });
 
-const activePage = () => {
-    const header = document.querySelector("header")
-    // const barsBox = document.querySelector(".bars-box")
+// const activePage = () => {
+//     const header = document.querySelector("header")
+//     // const barsBox = document.querySelector(".bars-box")
 
-    header.classList.remove('active');
-    setTimeout(() => {
-        header.classList.add('active');
-    }, 1100);
+//     header.classList.remove('active');
+//     setTimeout(() => {
+//         header.classList.add('active');
+//     }, 1100);
 
-    sections.forEach(section => {
-        section.classList.remove('active');
-    });
+//     sections.forEach(section => {
+//         section.classList.remove('active');
+//     });
 
-    menuIcon.classList.toggle('bx-x');
-    navBar.classList.toggle('active');
+//     menuIcon.classList.toggle('bx-x');
+//     navBar.classList.toggle('active');
 
-}
+// }
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -137,7 +137,7 @@ navLinks.forEach(link => {
 
         if (targetSection) {
             window.scrollTo({
-                top: targetSection.offsetTop - 100, // Adjust for fixed header
+                top: targetSection.offsetTop - 50, // Adjust for fixed header
                 behavior: 'smooth' // Smooth scrolling effect
             });
 
@@ -155,7 +155,7 @@ navLinks.forEach(link => {
 
 logoLink.addEventListener('click', () => {
     if(!navLinks[0].classList.contains('active')) {
-        activePage();
+        // activePage();
 
         navLinks[0].classList.add('active');
 
@@ -163,6 +163,9 @@ logoLink.addEventListener('click', () => {
             sections[0].classList.add('active');
         }, 1100);
     }
+
+    menuIcon.classList.remove('bx-x');
+    navBar.classList.remove('active');
 
 });
 

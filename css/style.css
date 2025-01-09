@@ -57,6 +57,17 @@ html{
         margin-top: 10rem;
     }
 
+    .services {
+        align-content: center;
+    }
+
+    .portfolio {
+        align-content: center;
+    }
+
+    .contact {
+        align-content: center;
+    }
 
 }
 
@@ -393,12 +404,9 @@ section {
     color: var(--main-color);
 }
 
-.services {
-    align-content: start;
-}
+
 
 .services-container {
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
@@ -472,7 +480,7 @@ section {
 }
 
 .resume {
-    margin-top: 0px;
+    margin-top: 2rem;
 }
 
 
@@ -662,9 +670,7 @@ section {
     font-size: 1.8rem;
 }
 
-.portfolio {
-    align-content: center;
-}
+
 
 
 .portfolio-container {
@@ -805,10 +811,6 @@ section {
 
 .portfolio-box .navigation .arrow-right {
     margin-left: 1.5rem;
-}
-
-.contact {
-    align-content: center;
 }
 
 

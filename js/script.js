@@ -138,6 +138,7 @@ window.onscroll = () => {
 // });
 
 
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default jump behavior

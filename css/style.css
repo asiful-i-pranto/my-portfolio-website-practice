@@ -329,6 +329,15 @@ section {
     transition: .5s;
 }
 
+.home-detail .btn-sci .sci a.researchgate{
+    width: 4rem; /* Adjust as needed */
+    aspect-ratio: 1 / 1; /* Ensures width = height dynamically */
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid var(--main-color);
+}
+
+
 
 .home-detail .btn-sci .sci a:hover {
     background: var(--main-color);
@@ -488,9 +497,11 @@ section {
 }
 
 
+
 .services-box:hover .icon :not(a i) {
     color: var(--main-color);
 }
+
 
 .services-box .icon a {
     display: inline-flex;
@@ -1050,10 +1061,23 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+    .home-detail .btn-sci {
+        flex-direction: column-reverse;
+    }
+
+    .home-detail .btn-sci .sci {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
     .home-img .img-box {
         width: 30rem;
         height: 30rem;
     }
+
+    .resume-detail.about .resume-list {
+        grid-template-columns: 1fr; 
+    }
+    
 
 
     .contact-box .field-box {

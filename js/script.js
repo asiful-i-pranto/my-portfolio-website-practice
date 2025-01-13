@@ -318,8 +318,23 @@ arrowLeft.addEventListener("click", () => {
 });
 
 let submitBtn = document.querySelector('#contact .button');
+let contactForm = document.querySelector('#contact-form');
+let formFields = contactForm.querySelectorAll('input, textarea'); // All form fields
 
+function checkFormFields() {
+    let allFilled = true;
+    formFields.forEach(field => {
+        if (field.value.trim() === '') {
+            allFilled = false;
+        }
+    });
+    submitBtn.disabled = !allFilled; // Enable/Disable submit button based on form fields
+}
 
+// Listen for any change in form fields and check the form
+formFields.forEach(field => {
+    field.addEventListener('input', checkFormFields);
+});
 
 
 submitBtn.addEventListener('click', function() {
@@ -327,6 +342,17 @@ submitBtn.addEventListener('click', function() {
     this.style = "background:  #323946; pointer-events: none";
 })
 
+// This script runs after the page has loaded
+window.addEventListener('load', function() {
+    // Get the contact section and form
+    let contactSection = document.querySelector('#contact');
+    let contactForm = document.querySelector('#contact-form');
+    
+    // Reset the form
+    if (contactForm) {
+        contactForm.reset(); // Reset the form fields
+    }
+});
 
 
 document.getElementById("year").textContent = new Date().getFullYear();

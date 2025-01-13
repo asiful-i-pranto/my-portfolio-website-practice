@@ -87,7 +87,7 @@ body {
     cursor: pointer;
     z-index: 100;
 }
-  #progress-value {
+#progress-value {
     display: block;
     height: calc(100% - 15px);
     width: calc(100% - 15px);
@@ -1008,10 +1008,21 @@ footer {
     transition: 0.2s;
 }
 
+/* Default submit button style */
+
+
+/* Style for the disabled submit button */
+.contact-box .button:disabled {
+    background-color: #cccccc; /* Gray color when disabled */
+    color: #888888; /* Dimmed text color */
+    cursor: not-allowed; /* Indicates it's not clickable */
+    opacity: 0.6; /* Slight transparency for a disabled effect */
+}
+
 .loader {
     pointer-events: none;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #fff;

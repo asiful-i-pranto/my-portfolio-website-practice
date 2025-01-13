@@ -5,7 +5,10 @@ const menuIcon = document.querySelector('#menu-icon');
 const navBar = document.querySelector('header nav');
 let popImgOverlay = document.querySelector('.popup-image');
 
+let scrollProgress = document.getElementById("progress");
+
 let proImage = document.querySelector('.home-img .img-box .img-item img');
+
 
 
 menuIcon.addEventListener('click', () => {
@@ -96,31 +99,94 @@ popImgOverlay.addEventListener('click', () => {
 
 // }
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+// window.onscroll = () => {
+//     sections.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop - 150;
+//         let height = sec.offsetHeight;
+//         let id = sec.getAttribute('id');
+
+//         let scrollProgress = document.getElementById("progress");
+//         let progressValue = document.getElementById("progress-value");
+//         let pos = document.documentElement.scrollTop;
+//         let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//         let scrollValue = Math.round((pos * 100) / calcHeight);
 
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+//         if(top >= offset && top < offset + height) {
+//             navLinks.forEach(links => {
+//                 links.classList.remove('active');
+//                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
 
-            });
+//             });
 
-            // barsBox.classList.remove('active');
-            // setTimeout(() => {
-            //     barsBox.classList.add('active');
-            // }, 1100);
+//             scrollProgress.style.display = "grid";
+
+//             // barsBox.classList.remove('active');
+//             // setTimeout(() => {
+//             //     barsBox.classList.add('active');
+//             // }, 1100);
 
 
             
-        };
+//         }
+//         else {
+//             scrollProgress.style.display = "none";
+//         }
+
+//         scrollProgress.addEventListener("click", () => {
+//             document.documentElement.scrollTop = 0;
+//           });
+//           scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+//     });
+
+
+// };
+
+// Selecting elements
+
+
+// Function to handle scroll-based active navigation
+let handleScroll = () => {
+    let scrollTop = window.scrollY;
+
+    sections.forEach(sec => {
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+
+        if (scrollTop >= offset && scrollTop < offset + height) {
+            navLinks.forEach(link => link.classList.remove("active"));
+
+            let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        }
     });
+
+    updateScrollProgress();
 };
+
+// Function to update the scroll progress indicator
+let updateScrollProgress = () => {
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+
+    scrollProgress.style.display = pos > 100 ? "grid" : "none";
+    scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+};
+
+// Scroll to top on click
+scrollProgress.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Attach event listeners
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);
+
 
 
 // navLinks.forEach((link, idx) => {
@@ -250,6 +316,24 @@ arrowLeft.addEventListener("click", () => {
 
     activePortfolio();
 });
+
+let submitBtn = document.querySelector('#contact .button');
+
+
+
+
+submitBtn.addEventListener('click', function() {
+    this.innerHTML = "<div class='loader'></div>";
+    this.style = "background:  #323946; pointer-events: none";
+})
+
+
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
+
+
 
 
 

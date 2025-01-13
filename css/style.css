@@ -65,15 +65,38 @@ html{
         align-content: center;
     }
 
-    .contact {
-        align-content: center;
-    }
+    
 
 }
 
 body {
     color: var(--white-color);
     background: var(--bg-color);
+}
+
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 55px;
+    width: 55px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 100;
+}
+  #progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #001a2e;
 }
 
 header {
@@ -307,7 +330,7 @@ section {
     transition: .5s;
 }
 
-.btn:hover {
+.button:hover {
     background: transparent;
     color: var(--main-color);
     box-shadow: none;
@@ -874,11 +897,28 @@ section {
 }
 
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    margin-top: 10rem
+}
+
+footer {
+    background-color: #333;  /* Dark background */
+    color: #fff;  /* White text */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 5rem;
 }
 
 .contact-container .contact-box:first-child {
@@ -960,9 +1000,32 @@ section {
 }
 
 
-.contact-box .btn {
+.contact-box .button {
     margin-top: 2rem;
     cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: 0.2s;
+}
+
+.loader {
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    animation: an1 1s ease infinite;
+}
+
+@keyframes an1 {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 
@@ -1119,4 +1182,7 @@ section {
         font-size: 3.5rem;
     }
 }
+
+
+
 

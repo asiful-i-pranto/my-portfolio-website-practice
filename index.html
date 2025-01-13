@@ -13,8 +13,12 @@
 </head>
 <body>
 
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+
     <!-- header -->
-     <header class="active">
+    <header class="active">
         <a href="#" class="logo"><img src="images/logo.jpg" alt=""><span>Asiful Pranto</span></a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -29,7 +33,7 @@
             </ul>
             
         </nav>
-     </header>
+    </header>
 
     <!-- bars background -->
     <!-- <div class="bars-box active">
@@ -97,7 +101,7 @@
                     <a href="#contact"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <h3>Front-End Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
+                <p>Transforming your ideas into stunning, user-friendly websites that drive engagement and boost user experience.</p>
             </div>
 
             <div class="services-box">
@@ -106,7 +110,7 @@
                     <a href="#contact"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <h3>WordPress Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
+                <p>Providing complete WordPress solutions, from custom themes to code-level development, tailored to your unique needs.</p>
             </div>
 
             <div class="services-box">
@@ -115,7 +119,7 @@
                     <a href="#contact"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <h3>WebFlow Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
+                <p>Unlock the future of web development with Webflow—creating dynamic, responsive websites with no code and limitless possibilities</p>
             </div>
 
 
@@ -125,7 +129,7 @@
                     <a href="#contact"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <h3>CAD Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius!</p>
+                <p>Expert SolidWorks CAD design for product development, delivering precise, innovative, and manufacturable designs to bring your ideas to life.</p>
             </div>
 
 
@@ -137,7 +141,7 @@
         <div class="resume-container">
             <div class="resume-box">
                 <h2>Why Hire Me?</h2>
-                <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, consectetur!</p>
+                <p class="desc">Hire <span style="color: #00ff99;">me</span> for innovative, reliable, and high-quality solutions that bring your ideas to life with precision and expertise.</p>
                 <button class="resume-btn active">Experience</button>
                 <button class="resume-btn">Education</button>
                 <button class="resume-btn">Skills</button>
@@ -305,7 +309,7 @@
                             <p>Freelance <span>Available</span></p>
                         </div>
                         <div class="resume-item">
-                            <p>Contact no <span>A(+880) 13044 65360</span></p>
+                            <p>Contact no <span>(+880) 13044 65360</span></p>
                         </div>
                         <div class="resume-item">
                             <p>Email <span>contact@asifulpranto.com</span></p>
@@ -395,7 +399,7 @@
 
     <!-- contact section -->
     <section id="contact" class="contact">
-         <div class="contact-container">
+        <div class="contact-container">
             <div class="contact-box">
                 <h2>Let's Work Together</h2>
                 <p class="desc">Looking to grow yourself through online? Get a complete website tailored to your needs.</p>
@@ -426,21 +430,32 @@
             </div>
 
             <div class="contact-box">
-                <form action="">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <h2 class="heading">Contact <span>Me!</span></h2>
                     <div class="field-box">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Adress" required>
+                        <input type="hidden" name="access_key" value="80a860d2-dc66-46a4-82e4-44af1e6fec4b">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Adress" required>
                         <!-- <input type="text" placeholder="Phone Number" required>
                         <input type="text" placeholder="Email Subject" required> -->
-                        <textarea name="" id="" placeholder="Your Message" required></textarea>
+                        <textarea name="message" id="" placeholder="Your Message" required></textarea>
                         
                         <button type="submit" class="button">Send Message</button>
+                        
                     </div>
                 </form>
             </div>
          </div>
+
+         <footer id="copyright-area">
+            <div class="containter">
+                <p>© 2024 - <span id="year"></span> || Asiful Pranto. All rights reserved.</p>
+            </div>
+         </footer>
+         
     </section>
+
+    
     
     <!-- custom js -->  
     <script src="js/script.js"></script>

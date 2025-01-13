@@ -11,6 +11,8 @@ let proImage = document.querySelector('.home-img .img-box .img-item img');
 
 
 
+
+
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navBar.classList.toggle('active');
@@ -319,7 +321,15 @@ arrowLeft.addEventListener("click", () => {
 
 let submitBtn = document.querySelector('#contact .button');
 let contactForm = document.querySelector('#contact-form');
-let formFields = contactForm.querySelectorAll('input, textarea'); // All form fields
+let formFields = contactForm.querySelectorAll('input, textarea'); // All form fields'
+let emailField = contactForm.querySelector('input[type="email"]'); 
+
+
+// Function to validate email format
+function validateEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+}
 
 function checkFormFields() {
     let allFilled = true;
@@ -328,7 +338,10 @@ function checkFormFields() {
             allFilled = false;
         }
     });
-    submitBtn.disabled = !allFilled; // Enable/Disable submit button based on form fields
+    let isValidEmail = validateEmail(emailField.value);
+
+    // Enable/Disable submit button based on form fields and email validity
+    submitBtn.disabled = !(allFilled && isValidEmail);
 }
 
 // Listen for any change in form fields and check the form
@@ -342,10 +355,12 @@ submitBtn.addEventListener('click', function() {
     this.style = "background:  #323946; pointer-events: none";
 })
 
+
+
 // This script runs after the page has loaded
 window.addEventListener('load', function() {
     // Get the contact section and form
-    let contactSection = document.querySelector('#contact');
+    
     let contactForm = document.querySelector('#contact-form');
     
     // Reset the form
@@ -357,9 +372,21 @@ window.addEventListener('load', function() {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+let servToContbtns = document.querySelectorAll('.services .services-box .serv-to-cont-btn')
+let contactSection = document.querySelector('#contact');
 
 
+servToContbtns.forEach((button) => {
+    button.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
 
+        // Scroll smoothly to the contact section
+        contactSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    });
+});
 
 
 

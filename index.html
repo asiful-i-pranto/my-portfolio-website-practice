@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
  
+    <
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,7 +53,7 @@
         <div class="home-detail">
             <h2>Hi! I'm</h2>
             <h1>MD. ASIFUL ISLAM</h1>
-            <h2>I'm a
+            <h2>a
                 <span style="--i:4;" data-text="Mechanical Engineer">Mechanical Engineer</span>
                 <span style="--i:3;" data-text="Web Developer">Web Developer</span>
                 <span style="--i:2;" data-text="Programmer">Programmer</span>
@@ -77,21 +78,28 @@
         <div class="home-img">
             <div class="img-box">
                 <div class="img-item">
-                    <img src="images/home.png" alt="profile pic">
+                    <div class="blur-load" style="background-image: url(images/proImg-small.png);">
+                        <img src="images/proImg.jpg" id="openModal" alt="profile pic">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="popup-image">
-            <span>&times;</span>
-            <img src="images/home image full.png" alt="profile pic">
+        <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="images/fullProImg.jpg" alt="Enlarged Image" class="modal-image">
         </div>
+    </div>
+
+        <!-- <div class="popup-image">
+            <span>&times;</span>
+            <img src="images/fullProImg.jpg" loading="lazy" alt="profile pic">
+        </div> -->
 
 
     </section>
-
-    
-
 
     <!-- services section -->
     <section id="services" class="services">
@@ -139,19 +147,104 @@
     </section>
 
     <!-- resume section -->
-     <section id="resume" class="resume">
+    <section id="resume" class="resume">
         <div class="resume-container">
             <div class="resume-box">
                 <h2>Why Hire Me?</h2>
                 <p class="desc">Hire <span style="color: #00ff99;">me</span> for innovative, reliable, and high-quality solutions that bring your ideas to life with precision and expertise.</p>
-                <button class="resume-btn active">Experience</button>
+                
+                <button class="resume-btn active">Skills</button>
                 <button class="resume-btn">Education</button>
-                <button class="resume-btn">Skills</button>
+                <button class="resume-btn">Experience</button>
                 <button class="resume-btn">About Me</button>
+                
+                
+                
             </div>
 
             <div class="resume-box">
-                <div class="resume-detail experience active">
+                <div class="resume-detail skills active">
+                    <h2 class="heading">My <span>Skills</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non voluptas obcaecati eligendi ex perferendis similique sint nostrum porro quasi?</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <i class='bx bxl-html5'></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-css3'></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-javascript'></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-react' ></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-bootstrap' ></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-tailwind-css' ></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-sass' ></i>
+                            <span>SASS</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-wordpress' ></i>
+                            <span>WordPress</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-php' ></i>
+                            <span>PHP</span>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <i class='bx bxl-python' ></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail education">
+                    <h2 class="heading">My <span>Education</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non voluptas obcaecati eligendi ex perferendis similique sint nostrum porro quasi?</p>
+
+                    
+
+                    <div class="resume-list education">
+                        <div class="resume-item">
+                            <p class="year">1019 - 2024</p>
+                            <h3>B.Sc. in Mechanical Engineering</h3>
+                            <p class="company">Ahsanullah University of Science and Technology</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nulla?</p>
+                        </div>
+
+
+                        <div class="resume-item">
+                            <p class="year">2023</p>
+                            <h3>Meta Front-End Web Development Professional Certificate</h3>
+                            <p class="company">Meta - Coursera</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nulla?</p>
+                        </div>
+
+                        
+
+                        <div class="resume-item">
+                            <p class="year">2024</p>
+                            <h3>WordPress Course</h3>
+                            <p class="company">Online Course - Udemy</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nulla?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail experience">
                     <h2 class="heading">My <span>Experience</span></h2>
                     <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non voluptas obcaecati eligendi ex perferendis similique sint nostrum porro quasi?</p>
                     
@@ -202,88 +295,6 @@
                     </div>
 
                 </div>
-
-                <div class="resume-detail education">
-                    <h2 class="heading">My <span>Education</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non voluptas obcaecati eligendi ex perferendis similique sint nostrum porro quasi?</p>
-
-                    
-
-                    <div class="resume-list education">
-                        <div class="resume-item">
-                            <p class="year">1019 - 2024</p>
-                            <h3>B.Sc. in Mechanical Engineering</h3>
-                            <p class="company">Ahsanullah University of Science and Technology</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nulla?</p>
-                        </div>
-
-
-                        <div class="resume-item">
-                            <p class="year">2023</p>
-                            <h3>Meta Front-End Web Development Professional Certificate</h3>
-                            <p class="company">Meta - Coursera</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nulla?</p>
-                        </div>
-
-                        
-
-                        <div class="resume-item">
-                            <p class="year">2024</p>
-                            <h3>WordPress Course</h3>
-                            <p class="company">Online Course - Udemy</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nulla?</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resume-detail skills">
-                    <h2 class="heading">My <span>Skills</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non voluptas obcaecati eligendi ex perferendis similique sint nostrum porro quasi?</p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <i class='bx bxl-html5'></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-css3'></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-javascript'></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-react' ></i>
-                            <span>React.js</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-bootstrap' ></i>
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-tailwind-css' ></i>
-                            <span>Tailwind CSS</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-sass' ></i>
-                            <span>SASS</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-wordpress' ></i>
-                            <span>WordPress</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class='bx bxl-php' ></i>
-                            <span>PHP</span>
-                        </div>
-                        
-                        <div class="resume-item">
-                            <i class='bx bxl-python' ></i>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                </div>
-
 
                 <div class="resume-detail about">
                     <h2 class="heading">About <span>Me</span></h2>
@@ -373,15 +384,15 @@
                 <div class="portfolio-carousel">
                     <div class="img-slide">
                         <div class="img-item">
-                            <img src="images/portfolio1.jpg" alt="portfolio image">
+                            <img src="images/portfolio1.jpg" loading="lazy" alt="portfolio image">
                         </div>
 
                         <div class="img-item">
-                            <img src="images/portfolio2.jpg" alt="portfolio image">
+                            <img src="images/portfolio2.jpg" loading="lazy" alt="portfolio image">
                         </div>
 
                         <div class="img-item">
-                            <img src="images/portfolio3.jpg" alt="portfolio image">
+                            <img src="images/portfolio3.jpg" loading="lazy" alt="portfolio image">
                         </div>
                     </div>
                 </div>

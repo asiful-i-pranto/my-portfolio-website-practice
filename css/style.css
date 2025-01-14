@@ -222,6 +222,7 @@ nav ul a.active{
 } */
 
 
+
 section {
     position: relative;
     min-height: 100vh;
@@ -250,6 +251,8 @@ section {
         overflow: auto;
     }
 } */
+
+
 
 .home {
     display: flex;
@@ -379,6 +382,8 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    /* Ensure it's behind the modal */
+    /* z-index: 1;  */
     
 }
 
@@ -423,20 +428,68 @@ section {
 
 
 .home-img .img-box .img-item img {
-    position: absolute;
+    /* position: absolute; */
     display: block;
     width: 100%;
     object-fit: cover;
     mix-blend-mode: lighten;
     transition: .2s linear;
+    object-position: center;
+    aspect-ratio: 1/1;
     
+    
+}
+
+.blur-load::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+}
+
+.blur-load.loaded::before {
+    content: none; /* Completely removes the pseudo-element */
+    animation: none; /* Stops the animation */
+}
+
+
+
+.blur-load {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.blur-load.loaded > img {
+    opacity: 1;
+}
+
+.blur-load > img {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
 }
 
 .home-img .img-box .img-item img:hover {
     transform: scale(1.1);
 }
 
-.home .popup-image {
+/* .home .popup-image {
     position: fixed;
     top: 0;
     left: 0;
@@ -470,6 +523,69 @@ section {
     border-radius: 5px;
     width: 40rem;
     object-fit: cover;
+} */
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9999; /* Ensure it is on top */
+}
+
+/* Modal Content (Image Container) */
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 10000; /* Ensure it is above the overlay */
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 1; /* Ensure it stays behind the modal content */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 40px; /* Increase size */
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold; /* Make the font weight heavier */
+    z-index: 10001; /* Ensure it's always on top of the modal */
+}
+
+/* Close Button Hover */
+.close-btn:hover {
+    color: red; /* Change color on hover */
+    transform: scale(1.2); /* Slightly increase the size on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
@@ -1156,6 +1272,10 @@ footer {
 
     .contact-box .field-box {
         grid-template-columns: 1fr;   
+    }
+
+    .modal-content {
+        max-width: 95%;
     }
     
 }

@@ -19,13 +19,13 @@ menuIcon.addEventListener('click', () => {
 })
 
 
-proImage.addEventListener('click', () => {
-    popImgOverlay.style.display = 'block';
-})
+// proImage.addEventListener('click', () => {
+//     popImgOverlay.style.display = 'block';
+// })
 
-popImgOverlay.addEventListener('click', () => {
-    popImgOverlay.style.display = 'none';
-})
+// popImgOverlay.addEventListener('click', () => {
+//     popImgOverlay.style.display = 'none';
+// })
 // const activePage = () => {
 //     const header = document.querySelector("header")
 //     const barsBox = document.querySelector(".bars-box")
@@ -387,6 +387,56 @@ servToContbtns.forEach((button) => {
         });
     });
 });
+
+
+const blurDivs = document.querySelectorAll(".blur-load");
+
+blurDivs.forEach(div => {
+    const img = div.querySelector("img");
+
+    function loaded() {
+        div.classList.add("loaded");
+        div.style.backgroundImage = "none"; // Remove background image
+    }
+
+    if(img.complete) {
+        loaded();
+    } else {
+        img.addEventListener("load", loaded);
+    }
+})
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.querySelector(".close-btn");
+
+    // Open modal on image click
+    openModal.addEventListener("click", function () {
+        modal.style.display = "flex";
+    });
+
+    // Close modal when clicking the close button
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Close modal with ESC key
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
+});
+
 
 
 

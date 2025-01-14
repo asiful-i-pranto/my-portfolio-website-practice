@@ -438,6 +438,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+const modal = document.getElementById("resumeModal");
+const btn = document.getElementById("resumeDownBtn"); // Changed ID
+const closeBtn = document.querySelector("#resumeModal .close-btn");
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal if the user clicks outside of it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
 
 
 

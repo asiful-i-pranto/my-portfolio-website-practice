@@ -63,7 +63,7 @@
             <p>But currently, working as a Front-End Web Developer and WordPress, specializing in responsive, SEO-friendly, and user-focused designs that help you stand out. <br> <b>Let’s create a website for you that’s fast, functional, and built for success!</b></p>
             
             <div class="btn-sci">
-                <a href="files/Resume (Web Dev) - Md. Asiful Islam.pdf" download class="button">Download Resume</a>
+                <a id="resumeDownBtn" class="button">Download Resume</a>
 
                 <div class="sci">
                     <a href="https://github.com/asiful-i-pranto" target="_blank"><i class='bx bxl-github'></i></a>
@@ -86,12 +86,29 @@
         </div>
 
         <!-- Modal -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <img src="images/fullProImg.jpg" alt="Enlarged Image" class="modal-image">
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="blur-load" style="background-image: url(images/fullProImg-small.jpg);">
+                    <img src="images/fullProImg.jpg" alt="Enlarged Image" class="modal-image">
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Modal -->
+        <div id="resumeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+
+                <!-- PDF Viewer -->
+                <iframe id="pdfViewer" src="files/Resume (Web Dev) - Md. Asiful Islam.pdf" width="100%" height="500px"></iframe>
+
+                <!-- Fallback Download Link -->
+                <p>
+                    If the PDF does not load, <a href="files/Resume (Web Dev) - Md. Asiful Islam.pdf" download class="download-btn">⬇ Download</a>
+                </p>
+            </div>
+        </div>
 
         <!-- <div class="popup-image">
             <span>&times;</span>

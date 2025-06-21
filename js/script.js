@@ -443,8 +443,13 @@ const btn = document.getElementById("resumeDownBtn"); // Changed ID
 const closeBtn = document.querySelector("#resumeModal .close-btn");
 
 btn.onclick = function() {
+    const pdfViewer = document.getElementById("pdfViewer");
+    if (!pdfViewer.src) {
+        pdfViewer.src = "files/Resume (Web Dev) - Md. Asiful Islam.pdf";
+    }
     modal.style.display = "block";
 }
+
 
 closeBtn.onclick = function() {
     modal.style.display = "none";

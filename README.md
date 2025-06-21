@@ -6,7 +6,7 @@ This personal Portfolio website is a fully responsive with some cool animation. 
 
 - 🔧 Develop with **HTML, CSS & Vanilla JavaScript**
 - 📱 Desktop, Tablet & Mobile responsive design
-- 🌍 Live site: [Visit Website](asiful-i-pranto.github.io/my-portfolio-website-practice/)
+- 🌍 Live site: [Visit Website](https://asiful-i-pranto.github.io/my-portfolio-website-practice/)
 
 ## 📷 Screenshots
 

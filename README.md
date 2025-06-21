@@ -14,24 +14,23 @@ This personal Portfolio website is a fully responsive with some cool animation. 
   <tr>
     <td align="center" valign="top">
       <strong>🖥️ Desktop View</strong><br>
-      <img src="screenshots/LandingPage - Desktop.png" alt="Page DesktopView Image" width="400">
+      <img src="screenshots/HomepageView - Desktop.png" alt="Page DesktopView Image" width="400">
     </td>
     <td align="center" valign="top">
       <strong>📱 Tablet View</strong><br>
-      <img src="screenshots/LandingPage - Tablet.png" alt="Page TabletView Image" width="300">
+      <img src="screenshots/HomepageView - Tablet.png" alt="Page TabletView Image" width="300">
     </td>
     <td align="center" valign="top">
       <strong>📱 Mobile View</strong><br>
-      <img src="screenshots/LandingPage - Mobile.png" alt="Page MobileView Image" width="200">
+      <img src="screenshots/HomepageView - Mobile.png" alt="Page MobileView Image" width="200">
     </td>
   </tr>
 </table>
 
 ## ⚙️ Tech Stack
 
-- HTML
+- HTML, Custom CSS & JavaScript
 - Contact Form
-- Custom CSS & JavaScript
 - Responsive Design (Media Queries)
 
 ## ✍️ Author
@@ -39,9 +38,6 @@ This personal Portfolio website is a fully responsive with some cool animation. 
 **Md. Asiful Islam (Asiful Pranto)**  
 Frontend & WordPress Developer  
 [Portfolio Website](https://asifulpranto.com) | [LinkedIn](https://linkedin.com/in/asiful-i-pranto)
-
-##
-
 
 
 ## 📃 License

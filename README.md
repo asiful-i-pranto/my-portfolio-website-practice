@@ -1,5 +1,7 @@
 # 🌐 My Personal Portfolio Website – HTML, CSS & JavaScript
 
+## This Website is now Under Development. The full website is being customized using Elementor & Custom CSS and JavaScript. 
+
 This personal Portfolio website is a fully responsive with some cool animation. Only HTML, CSS and JavaScript static website integrated with Contact Form. This website is build for practice purpose and I have followed a Youtube video from a channel named [Codehal](https://youtube.com/@codehal) but added some additional functionality and Design according to my own need.
 
 ## 📌 Project Highlights

@@ -4,7 +4,7 @@ This personal Portfolio website is a fully responsive with some cool animation. 
 
 ## 📌 Project Highlights
 
-- 🔧 Develop with **HTML, CSS & Vanilla JavaScript**
+- 🔧 Develop with **Elementor Page Builder, CSS & Vanilla JavaScript**
 - 📱 Desktop, Tablet & Mobile responsive design
 - 🌍 Live site: [Visit Website](https://asifulpranto.com/)
 
